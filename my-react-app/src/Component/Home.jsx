@@ -20,6 +20,14 @@ function Home() {
           <div className='flex justify-center items-center w-[50px] h-[50px] bg-blue-500 text-white text-2xl rounded-[15px] font-black italic bg-gradient-to-br from-[#48a5ff] to-[#2860ef] shadow-[0_7px_16px_rgba(57,120,246,0.24)]'>
             M
           </div>
+          <div className='flex flex-col w-auto h-auto'>
+            <p>
+              MESSENGER <span>SYSTEM</span>
+            </p>
+            <p>
+              
+            </p>
+          </div>
         </div>
 
       </div>
