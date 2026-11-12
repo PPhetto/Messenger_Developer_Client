@@ -16,33 +16,33 @@ function Login_page() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
 
-    async function handleLogin() {
-        try {
-            const res = await fetch('http://localhost:5000/api/auth/login', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ 
-                    username, 
-                    password 
-                }),
-            })
+    // async function handleLogin() {
+    //     try {
+    //         const res = await fetch('http://localhost:5000/api/auth/login', {
+    //             method: 'POST',
+    //             headers: {
+    //                 'Content-Type': 'application/json',
+    //             },
+    //             body: JSON.stringify({ 
+    //                 username, 
+    //                 password 
+    //             }),
+    //         })
 
-            const data = await res.json();
+    //         const data = await res.json();
 
-            if (res.ok) {
-                await localStorage.setItem('token', data.token);
-                alert(data.message);
-                navigate(PATHS.HOME);
-            } else {
-                alert(data.message);
-            }
-        } catch (error) {
-            console.error('Error during login:', error);
-            alert('An error occurred while logging in.');
-        }
-    }
+    //         if (res.ok) {
+    //             await localStorage.setItem('token', data.token);
+    //             alert(data.message);
+    //             navigate(PATHS.HOME);
+    //         } else {
+    //             alert(data.message);
+    //         }
+    //     } catch (error) {
+    //         console.error('Error during login:', error);
+    //         alert('An error occurred while logging in.');
+    //     }
+    // }
 
 
   return (
@@ -95,7 +95,8 @@ function Login_page() {
                     onClick={(e) => {
                         e.preventDefault();
                         console.log("Login clicked!");
-                        handleLogin();
+                        // handleLogin();
+                        navigate(PATHS.HOME);
                     }}
                 >
                     Login
@@ -107,11 +108,11 @@ function Login_page() {
             >
                 Forgot password?
             </Link>
-            <Link
+            {/* <Link
                 to={PATHS.REGISTER}
             >   
                 Don't have an account? <span className='text-blue-500 hover:underline'>Sign up</span>
-            </Link>
+            </Link> */}
         </div>
     </div>
   )

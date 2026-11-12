@@ -67,7 +67,8 @@ function Register_page() {
     
                 if (res.ok) {
                     alert(data.message);
-                    navigate(PATHS.LOGIN);
+                    // navigate(PATHS.LOGIN);
+                    window.close();
                 } else {
                     alert(data.message);
                 }
@@ -243,14 +244,15 @@ function Register_page() {
                             handleRegister();
                         }}
                     >
-                        Register
+                        Add
                     </button>
                     <button
                         type="cancel"
                         className='w-[48%] h-[60px] rounded-lg p-2 border border-red-500 bg-red-500 text-white hover:bg-red-400 hover:border-red-400'
                         onClick={(e) => {
                             // e.preventDefault();
-                            navigate(PATHS.LOGIN);
+                            // navigate(PATHS.LOGIN);
+                            window.close();
                         }}
                     >
                         Cancel

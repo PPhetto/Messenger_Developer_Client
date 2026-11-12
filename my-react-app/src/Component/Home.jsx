@@ -20,6 +20,7 @@ import work_records_p from '../Content/WorkRecords.jsx'
 import reports_p from '../Content/Reports.jsx'
 import database_p from '../Content/Database.jsx'
 
+import users_permission_p from '../Content/Users_permission.jsx'
 import manage_permission_p from '../Content/Manage_permission.jsx'
 
 
@@ -31,7 +32,7 @@ function Home() {
 
   const menus = [
     { id: "Overview", label: "หน้าภาพรวม" },
-    { id: "Home", label: "หน้าหลัก" },
+    // { id: "Home", label: "หน้าหลัก" },
     { id: "Orders", label: "สั่งงาน" },
     { id: "TaskManagement", label: "จัดการงาน" },
     { id: "WorkRecords", label: "บันทึกผลการทำงาน" },
@@ -40,12 +41,13 @@ function Home() {
   ]
 
   const menus2 = [
-    { id: "Manage_permission", label: "จัดการสิทธิ์" },
+    // { id: "Manage_permission", label: "จัดการสิทธิ์" },
+    { id: "Users_permission", label: "จัดการผู้ใช้งาน" },
   ]
 
   const contentComponents = {
     Overview: overview_p,
-    Home: homecontent_p,
+    // Home: homecontent_p,
     Orders: orders_p,
     TaskManagement: task_management_p,
     WorkRecords: work_records_p,
@@ -54,7 +56,8 @@ function Home() {
   }
 
   const contentComponents2 = {
-    Manage_permission: manage_permission_p,
+    Users_permission: users_permission_p,
+    // Manage_permission: manage_permission_p,
   }
 
   const allcontentComponents = { ...contentComponents, ...contentComponents2 };
