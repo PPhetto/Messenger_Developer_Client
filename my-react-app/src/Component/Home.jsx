@@ -37,7 +37,7 @@ function Home() {
     { id: "TaskManagement", label: "จัดการงาน" },
     { id: "WorkRecords", label: "บันทึกผลการทำงาน" },
     { id: "Reports", label: "รายงาน" },
-    { id: "Database", label: "ฐานข้อมูล" },
+    // { id: "Database", label: "ฐานข้อมูล" },
   ]
 
   const menus2 = [
@@ -52,7 +52,7 @@ function Home() {
     TaskManagement: task_management_p,
     WorkRecords: work_records_p,
     Reports: reports_p,
-    Database: database_p,
+    // Database: database_p,
   }
 
   const contentComponents2 = {

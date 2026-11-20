@@ -92,15 +92,15 @@ function Overview() {
       iconColor: "text-amber-600",
     },
     {
-      title: "อัตราการจบงาน",
+      title: "งานที่ถูกยกเลิก",
       value: "75",
-      unit: "%",
-      change: "+5.4%",
+      unit: "รายการ",
+      change: "-5.4%",
       positive: true,
       description: "เทียบกับเดือนก่อน",
       icon: ChartNoAxesCombined,
-      iconBg: "bg-violet-50",
-      iconColor: "text-violet-600",
+      iconBg: "bg-red-50",
+      iconColor: "text-red-500",
     },
   ];
 
@@ -386,10 +386,10 @@ function Overview() {
         </section>
 
         {/* Charts */}
-        <section className="grid grid-cols-1 gap-5 xl:grid-cols-3">
+        <section className="flex w-full gap-5">
 
           {/* Monthly Bar Chart */}
-          <div className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm xl:col-span-2">
+          <div className="flex flex-col w-full rounded-xl border border-slate-200 bg-white p-5 shadow-sm xl:col-span-2">
 
             <div className="mb-6 flex flex-wrap items-center justify-between gap-3">
 
@@ -495,7 +495,7 @@ function Overview() {
           </div>
 
           {/* Completion Rate */}
-          <div className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
+          {/* <div className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
 
             <h2 className="font-bold text-slate-800">
               อัตราความสำเร็จ
@@ -565,7 +565,7 @@ function Overview() {
 
             </div>
 
-          </div>
+          </div> */}
 
         </section>
 
